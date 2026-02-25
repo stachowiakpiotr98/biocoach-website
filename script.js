@@ -385,3 +385,31 @@ if (testimonialsCarousel && testimonialsPrev && testimonialsNext) {
     updateCardsPerViewT();
     window.addEventListener('resize', updateCardsPerViewT);
 }
+
+// ===========================
+// COOKIE CONSENT BANNER
+// ===========================
+
+const cookieBanner = document.getElementById('cookieBanner');
+const cookieAccept = document.getElementById('cookieAccept');
+const cookieReject = document.getElementById('cookieReject');
+
+if (cookieBanner) {
+    // Pokaż baner tylko jeśli użytkownik jeszcze nie podjął decyzji
+    const consent = localStorage.getItem('cookie-consent');
+    if (!consent) {
+        cookieBanner.classList.add('active');
+    }
+
+    cookieAccept.addEventListener('click', () => {
+        localStorage.setItem('cookie-consent', 'accepted');
+        cookieBanner.classList.remove('active');
+        // Załaduj GA4 po zgodzie
+        if (typeof loadGA4 === 'function') loadGA4();
+    });
+
+    cookieReject.addEventListener('click', () => {
+        localStorage.setItem('cookie-consent', 'rejected');
+        cookieBanner.classList.remove('active');
+    });
+}

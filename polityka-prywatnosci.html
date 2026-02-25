@@ -2,13 +2,24 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D1PN69Y3YW"></script>
+<!-- Google Analytics 4  ładowane dopiero po zgodzie użytkownika -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-D1PN69Y3YW');
+
+        function loadGA4() {
+            if (document.querySelector('script[src*="googletagmanager"]')) return;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-D1PN69Y3YW';
+            document.head.appendChild(s);
+            gtag('js', new Date());
+            gtag('config', 'G-D1PN69Y3YW');
+        }
+
+        if (localStorage.getItem('cookie-consent') === 'accepted') {
+            loadGA4();
+        }
     </script>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -109,9 +120,19 @@
         <p>Formularze kontaktowe obsługiwane są przez usługę <strong>FormSubmit.co</strong>, która pośredniczy w przesyłaniu wiadomości na skrzynkę e-mail Administratora. Dane nie są przechowywane na serwerach FormSubmit dłużej niż jest to konieczne do dostarczenia wiadomości.</p>
         <p>Dane osobowe nie są sprzedawane ani udostępniane podmiotom trzecim w celach marketingowych.</p>
 
-        <h2>5. Pliki cookies</h2>
-        <p>Serwis biocoach.pl <strong>nie wykorzystuje własnych plików cookies</strong> do śledzenia użytkowników ani celów analitycznych.</p>
-        <p>Strona korzysta z zewnętrznych zasobów (Google Fonts, Unsplash), które mogą stosować własne pliki cookies zgodnie z ich politykami prywatności:</p>
+        <h2>5. Pliki cookies i analityka</h2>
+        <p>Serwis biocoach.pl wykorzystuje <strong>Google Analytics 4</strong> (GA4) do analizy ruchu na stronie. GA4 zbiera anonimowe dane statystyczne, takie jak:</p>
+        <ul>
+            <li>Liczba odwiedzin i odsłon stron</li>
+            <li>Źródło ruchu (skąd trafił użytkownik)</li>
+            <li>Czas spędzony na stronie</li>
+            <li>Typ urządzenia i przeglądarki</li>
+            <li>Przybliżona lokalizacja (kraj/miasto)</li>
+        </ul>
+        <p>Google Analytics wykorzystuje pliki cookies. <strong>Cookies analityczne są ładowane wyłącznie po wyrażeniu zgody</strong> przez użytkownika za pomocą banera cookie wyświetlanego przy pierwszej wizycie.</p>
+        <p>Dane z GA4 są przetwarzane przez Google LLC zgodnie z ich <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Polityką prywatności</a>. Dane mogą być przekazywane do USA na podstawie odpowiednich zabezpieczeń prawnych.</p>
+        <p>Użytkownik może w dowolnym momencie cofnąć zgodę na cookies, usuwając dane z przeglądarki (localStorage) lub korzystając z <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+        <p>Strona korzysta również z zewnętrznych zasobów (Google Fonts, Unsplash), które mogą stosować własne pliki cookies:</p>
         <ul>
             <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Polityka prywatności Google</a></li>
             <li><a href="https://unsplash.com/privacy" target="_blank" rel="noopener">Polityka prywatności Unsplash</a></li>
@@ -159,6 +180,34 @@
         const el = document.getElementById('current-year');
         if (el) el.textContent = new Date().getFullYear();
     })();
+</script>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-banner-content">
+            <p>Ta strona używa plików cookies (Google Analytics) w celu analizy ruchu. Klikając Akceptuję", wyrażasz zgodę na ich użycie. Szczegóły w <a href="polityka-prywatnosci.html">Polityce Prywatności</a>.</p>
+            <div class="cookie-banner-buttons">
+                <button class="cookie-btn cookie-btn-reject" id="cookieReject">Odrzuć</button>
+                <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Akceptuję</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+(function(){
+    var banner = document.getElementById('cookieBanner');
+    if (!banner) return;
+    if (!localStorage.getItem('cookie-consent')) banner.classList.add('active');
+    document.getElementById('cookieAccept').addEventListener('click', function(){
+        localStorage.setItem('cookie-consent','accepted');
+        banner.classList.remove('active');
+        if (typeof loadGA4==='function') loadGA4();
+    });
+    document.getElementById('cookieReject').addEventListener('click', function(){
+        localStorage.setItem('cookie-consent','rejected');
+        banner.classList.remove('active');
+    });
+})();
 </script>
 </body>
 </html>
