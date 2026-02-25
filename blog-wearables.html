@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta name="description" content="HRV, temperatura ciała, tlen we krwi – które parametry wearables są kluczowe dla optymalizacji zdrowia? Przewodnik biohackera po monitoringu zdrowia. Trener personalny Poznań.">
+    <meta name="keywords" content="wearables, HRV, monitoring zdrowia, Whoop, Oura Ring, Apple Watch, biohacking, trener personalny Poznań, zmienność rytmu serca, tracking fitness">
+    <title>Wearables: Co warto monitorować? Przewodnik biohackera | BioCoach</title>
+    
+<meta property="og:title" content="Wearables: Co warto monitorować? Przewodnik biohackera">
+    <meta property="og:description" content="HRV, temperatura, tlen – które parametry są kluczowe dla zdrowia?">
+    <meta property="og:type" content="article">
+    
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+<link rel="stylesheet" href="style.css">
+    <style>
+        .article-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=1920&h=1080&fit=crop') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .article-container { max-width: 800px; margin: 80px auto; padding: 0 20px; }
+        .article-meta { display: flex; gap: 20px; margin-bottom: 30px; font-size: 0.9rem; color: #999; }
+        .article-content { line-height: 1.6; font-size: 1.05rem; }
+        .article-content h2 { font-size: 1.9rem; margin: 55px 0 18px; color: var(--accent-orange); }
+        .article-content h3 { font-size: 1.4rem; margin: 35px 0 12px; }
+        .article-content p { margin-bottom: 12px; }
+        .article-content ul, .article-content ol { margin: 12px 0 18px; padding-left: 28px; }
+        .article-content li { margin-bottom: 6px; }
+
+        .highlight-box {
+            background: var(--gray-dark);
+            padding: 20px 25px;
+            border-left: 4px solid var(--accent-orange);
+            margin: 40px 0;
+            border-radius: 5px;
+        }
+        .highlight-box > *:first-child { margin-top: 0; }
+        .highlight-box > *:last-child { margin-bottom: 0; }
+
+        .key-takeaway {
+            background: linear-gradient(135deg, rgba(255, 87, 51, 0.1), rgba(0, 123, 255, 0.1));
+            padding: 20px 25px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        .key-takeaway > *:first-child { margin-top: 0; }
+        .key-takeaway > *:last-child { margin-bottom: 0; }
+
+        .device-comparison {
+            background: var(--gray-dark);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+        
+        .device-comparison > *:first-child { margin-top: 0; }
+        .device-comparison > *:last-child { margin-bottom: 0; }
+        .device-comparison p { margin-bottom: 10px; }
+
+        .metric-card {
+            background: var(--primary-bg);
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+        }
+        .metric-card > *:first-child { margin-top: 0; }
+        .metric-card > *:last-child { margin-bottom: 0; }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-orange);
+            transition: var(--transition);
+        }
+        .back-link:hover { transform: translateX(-5px); }
+    </style>
+</head>
+<body>
+<nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">BIO<span>COACH</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/#start" class="nav-link">Start</a></li>
+                <li><a href="/#omnie" class="nav-link">O mnie</a></li>
+                <li><a href="/#oferta" class="nav-link">Oferta</a></li>
+                <li><a href="/#blog" class="nav-link active">Blog</a></li>
+                <li><a href="/#opinie" class="nav-link">Opinie</a></li>
+                <li><a href="/#kontakt" class="nav-link">Kontakt</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+<section class="article-hero">
+        <div>
+            <span style="display: inline-block; padding: 8px 20px; background: var(--accent-blue); border-radius: 20px; font-size: 0.85rem; margin-bottom: 20px;">TECHNOLOGIA</span>
+            <h1 style="font-size: 3rem; margin-bottom: 20px;">Wearables:<br>Co warto monitorować?</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Przewodnik po kluczowych parametrach zdrowia i regeneracji</p>
+        </div>
+    </section>
+
+<article class="article-container">
+        <a href="/#blog" class="back-link">← Wróć do bloga</a>
+        
+        <div class="article-meta">
+            <span>📅 17 stycznia 2024</span>
+            <span>⏱️ 12 min czytania</span>
+        </div>
+
+        <div class="article-content">
+            <p class="lead" style="font-size: 1.25rem; font-weight: 300; color: #ccc;">
+                Rynek urządzeń do monitorowania zdrowia mocno urósł w ostatnich latach. Whoop, Oura Ring, Apple Watch czy Garmin obiecują „lepszą formę” i „optymalizację”. 
+                Tylko że w praktyce wiele osób tonie w danych i… nie wie, co z nimi zrobić. 
+                Poniżej masz prosty przewodnik: <strong>które parametry naprawdę mają znaczenie</strong>, jak je rozumieć i jak podejmować na ich podstawie sensowne decyzje.
+            </p>
+
+            <h2>Dlaczego wearables pomagają, a nie tylko „dodają cyferek”?</h2>
+            <p>
+                Klasyczne podejście do zdrowia bywa reaktywne: działasz dopiero, gdy coś zaczyna boleć albo wyniki idą w dół. 
+                Wearables umożliwiają podejście proaktywne: obserwujesz organizm na bieżąco i szybciej zauważasz, że „coś się zbiera” (przemęczenie, spadek regeneracji, infekcja).
+            </p>
+
+            <p>
+                Przykład z pracy trenerskiej: klient narzekał na „zastój”, mimo że trenował regularnie. Dane pokazały, że jego HRV spadło o ~40%, a tętno spoczynkowe było wyraźnie wyższe niż zwykle.
+                Wniosek: przeciążenie + niewyspanie. Zmieniliśmy plan, dodaliśmy tydzień lżejszego treningu i uporządkowaliśmy sen. 
+                Po kilku tygodniach wróciła regeneracja i wyniki.
+            </p>
+
+            <div class="highlight-box">
+                <h3>🎯 Najważniejsza zasada</h3>
+                <p style="font-size: 1.1rem; font-weight: 500;">
+                    Mierz po to, żeby podejmować lepsze decyzje — nie po to, żeby zbierać liczby.
+                </p>
+                <p style="margin-top: 12px;">
+                    Największą wartość dają <strong>trendy</strong> (zmiany w czasie), a nie pojedynczy pomiar z jednego dnia.
+                </p>
+            </div>
+
+            <h2>Poziom S: parametry, które warto śledzić zawsze</h2>
+            <p>
+                Te metryki najczęściej realnie „przekładają się” na decyzje: trening, regeneracja, sen i stres. Jeśli masz wybrać tylko kilka — wybierz te.
+            </p>
+
+            <div class="metric-card">
+                <h3>❤️ HRV (zmienność rytmu serca)</h3>
+                <p><strong>Co to jest?</strong> Zmienność odstępów czasu między uderzeniami serca. Paradoksalnie: <strong>wyższa zmienność zwykle oznacza lepszą regenerację</strong>.</p>
+
+                <p><strong>Dlaczego to takie ważne?</strong></p>
+                <ul>
+                    <li>To jeden z najlepszych wskaźników obciążenia organizmu (stres, przemęczenie, infekcja).</li>
+                    <li>Spadki HRV często pojawiają się zanim „poczujesz”, że coś jest nie tak.</li>
+                    <li>Pomaga dobrać intensywność treningu do aktualnej gotowości.</li>
+                </ul>
+
+                <p><strong>Jak interpretować w praktyce?</strong></p>
+                <ul>
+                    <li><strong>W okolicy Twojej normy (±10%)</strong> → zwykle możesz trenować normalnie.</li>
+                    <li><strong>Spadek o 10–20%</strong> → rozważ lżejszą jednostkę lub mniej serii.</li>
+                    <li><strong>Spadek o 20% lub więcej</strong> → sygnał ostrzegawczy: sen, odpoczynek, ograniczenie intensywności.</li>
+                    <li><strong>Trend rosnący (7–30 dni)</strong> → regeneracja i forma idą w dobrą stronę.</li>
+                    <li><strong>Trend spadkowy</strong> → kumuluje się zmęczenie, przyda się tydzień lżejszy.</li>
+                </ul>
+
+                <p><strong>Ważne:</strong> HRV jest bardzo indywidualne — liczą się Twoje zmiany w czasie, a nie porównywanie się z innymi.</p>
+
+                <div style="background: rgba(255,87,51,0.1); padding: 20px; margin-top: 20px; border-radius: 5px;">
+                    <p><strong>💡 Wskazówka:</strong> Nie wyciągaj wniosków z jednego dnia. Patrz na 3–7 dni i ogólny trend.</p>
+                </div>
+            </div>
+
+            <div class="metric-card">
+                <h3>😴 Sen: długość, jakość i fazy</h3>
+                <p><strong>Co to jest?</strong> Urządzenia próbują oszacować m.in. sen głęboki, REM, liczbę przebudzeń i ogólną efektywność snu.</p>
+
+                <p><strong>Co jest najważniejsze w praktyce?</strong></p>
+                <ul>
+                    <li><strong>Długość snu</strong> (czy realnie śpisz 7–9 godzin).</li>
+                    <li><strong>Przebudzenia</strong> (częste wybudzenia mocno obniżają jakość).</li>
+                    <li><strong>Regularność</strong> (podobne godziny snu i pobudki robią ogromną różnicę).</li>
+                </ul>
+
+                <p><strong>Orientacyjne proporcje faz (zależne od osoby):</strong></p>
+                <ul>
+                    <li>Sen głęboki: 15–25%</li>
+                    <li>REM: 20–25%</li>
+                    <li>Sen lekki: reszta</li>
+                </ul>
+
+                <p><strong>Sygnały ostrzegawcze:</strong></p>
+                <ul>
+                    <li>Dużo przebudzeń i niska efektywność snu.</li>
+                    <li>Wyraźny spadek REM po alkoholu (bardzo częste).</li>
+                    <li>Powtarzające się „słabe noce” kilka razy w tygodniu.</li>
+                </ul>
+
+                <p><em>Więcej o śnie: <a href="blog-optymalizacja-snu" style="color: var(--accent-orange);">Jak poprawić jakość snu?</a></em></p>
+            </div>
+
+            <div class="metric-card">
+                <h3>🫀 Tętno spoczynkowe (RHR)</h3>
+                <p><strong>Co to jest?</strong> Liczba uderzeń serca na minutę w spoczynku (najlepiej rano, w porównywalnych warunkach).</p>
+
+                <p><strong>Po co to śledzić?</strong></p>
+                <ul>
+                    <li>To prosty wskaźnik obciążenia organizmu.</li>
+                    <li>Wzrost o <strong>5–10 uderzeń</strong> względem Twojej normy często oznacza: przemęczenie, stres, odwodnienie albo infekcję.</li>
+                    <li>Spadek RHR w dłuższym okresie zwykle idzie w parze z poprawą kondycji.</li>
+                </ul>
+
+                <p><strong>Orientacyjne zakresy:</strong></p>
+                <ul>
+                    <li>Osoby nietrenujące: 60–80 bpm</li>
+                    <li>Aktywni: 50–65 bpm</li>
+                    <li>Sportowcy wytrzymałościowi: 40–50 bpm</li>
+                </ul>
+
+                <p><strong>Prosta zasada:</strong> jeśli RHR jest wyraźnie wyższe niż zwykle, nie dokładaj gazu „na siłę”.</p>
+            </div>
+
+            <h2>Poziom A: bardzo przydatne, ale zależne od sytuacji</h2>
+
+            <div class="metric-card">
+                <h3>🌡️ Temperatura (skóry / szacowana wewnętrzna)</h3>
+                <p><strong>Po co?</strong> U wielu osób wzrost temperatury (względem Twojej bazy) pojawia się 1–2 dni przed objawami infekcji.</p>
+
+                <ul>
+                    <li>Wczesny sygnał, że organizm „coś łapie”.</li>
+                    <li>U kobiet: bardzo przydatne w obserwacji cyklu.</li>
+                    <li>Wzrost temperatury + spadek HRV = częsty zestaw przy przemęczeniu lub infekcji.</li>
+                </ul>
+
+                <p><strong>Praktycznie:</strong> jeśli widzisz odchylenie bez sensownego powodu, odpuść intensywność i dopnij sen.</p>
+            </div>
+
+            <div class="metric-card">
+                <h3>💨 SpO₂ (saturacja tlenu)</h3>
+                <p><strong>Norma:</strong> zwykle 95–100%.</p>
+
+                <p><strong>Kiedy ma sens?</strong></p>
+                <ul>
+                    <li>Gdy podejrzewasz problemy oddechowe lub bezdech senny (spadki w nocy).</li>
+                    <li>Przy wyjazdach w góry / na wysokość.</li>
+                </ul>
+
+                <p>Jeśli czujesz się stale niewyspany, chrapiesz i masz niską jakość snu — warto potraktować ten parametr poważniej.</p>
+            </div>
+
+            <div class="metric-card">
+                <h3>🔥 Szacunek kalorii i aktywności</h3>
+                <p><strong>Uwaga:</strong> większość urządzeń zawyża spalanie (często o 10–30%). Traktuj to jako przybliżenie.</p>
+
+                <p><strong>Co może być pomocne?</strong></p>
+                <ul>
+                    <li>Porównywanie dni „bardziej aktywnych” i „mniej aktywnych”.</li>
+                    <li>Budowanie nawyku ruchu (np. kroki).</li>
+                    <li>Świadomość codziennej aktywności poza treningiem.</li>
+                </ul>
+
+                <p>Do precyzyjnego bilansu lepiej sprawdza się: jedzenie + masa ciała + obwody + lustro.</p>
+            </div>
+
+            <h2>Poziom B: miłe dodatki, ale nie fundament</h2>
+            <ul style="margin: 30px 0;">
+                <li><strong>Szacowane VO₂ max</strong> – przydatne głównie dla osób trenujących wytrzymałościowo.</li>
+                <li><strong>Gotowość / regeneracja „w jednej liczbie”</strong> – może pomóc na start, ale warto rozumieć, co stoi za wynikiem.</li>
+                <li><strong>„Poziom stresu”</strong> – często to pochodna HRV i tętna; jeśli śledzisz HRV, masz już najważniejszą informację.</li>
+                <li><strong>Częstość oddechów</strong> – ciekawa rzecz, ale dla większości osób rzadko prowadzi do konkretnych decyzji.</li>
+            </ul>
+
+            <h2>Porównanie urządzeń: co wybrać?</h2>
+
+            <div class="device-comparison">
+                <h3>🏆 Whoop 4.0</h3>
+                <p><strong>Najlepsze dla:</strong> osób regularnie trenujących i tych, które chcą mocno kontrolować regenerację</p>
+                <p><strong>Mocne strony:</strong> dobry pomiar HRV i tętna, nacisk na regenerację, brak ekranu (mniej rozpraszaczy)</p>
+                <p><strong>Słabsze strony:</strong> abonament, brak pełnych funkcji „smartwatcha”, ograniczone funkcje sportowe w porównaniu z Garminem</p>
+                <p><strong>Moja ocena:</strong> ⭐⭐⭐⭐⭐ (bardzo dobry do regeneracji i treningu)</p>
+            </div>
+
+            <div class="device-comparison">
+                <h3>💍 Oura Ring (Gen 3)</h3>
+                <p><strong>Najlepsze dla:</strong> osób skupionych na śnie, regeneracji i dyskretnej formie noszenia</p>
+                <p><strong>Mocne strony:</strong> świetny sen, temperatura, HRV w nocy, wygoda (nie przeszkadza w dzień)</p>
+                <p><strong>Słabsze strony:</strong> słabsze śledzenie treningów, koszt urządzenia + abonament, warto zdjąć do ćwiczeń typu wyciskanie, żeby przez sztangę nie zrobić rys</p>
+                <p><strong>Moja ocena:</strong> ⭐⭐⭐⭐⭐ (top do snu i regeneracji)</p>
+            </div>
+
+            <div class="device-comparison">
+                <h3>⌚ Apple Watch Ultra</h3>
+                <p><strong>Najlepsze dla:</strong> osób, które chcą „wszystko w jednym” i korzystają z ekosystemu Apple</p>
+                <p><strong>Mocne strony:</strong> funkcje smart, GPS, aplikacje, EKG, SpO₂, wygoda na co dzień</p>
+                <p><strong>Słabsze strony:</strong> bateria, dużo bodźców (powiadomienia), nie jest tak „regeneracyjny” jak Whoop/Oura</p>
+                <p><strong>Moja ocena:</strong> ⭐⭐⭐⭐ (świetny, jeśli potrzebujesz też funkcji „życiowych”)</p>
+            </div>
+
+            <div class="device-comparison">
+                <h3>🏃 Garmin Fenix / Forerunner</h3>
+                <p><strong>Najlepsze dla:</strong> osób trenujących wytrzymałościowo, outdoor, bieganie, triathlon</p>
+                <p><strong>Mocne strony:</strong> bateria, GPS, mapy, narzędzia treningowe, analiza obciążeń</p>
+                <p><strong>Słabsze strony:</strong> interfejs i obsługa bywają mniej intuicyjne, a „regeneracja” to głównie algorytmy</p>
+                <p><strong>Moja ocena:</strong> ⭐⭐⭐⭐ (bardzo mocny w sporcie wytrzymałościowym)</p>
+            </div>
+
+            <div class="key-takeaway">
+                <h3>🎯 Moje rekomendacje</h3>
+                <p>
+                    <strong>Sen i regeneracja:</strong> Oura Ring<br>
+                    <strong>Regeneracja + trening (bez rozpraszaczy):</strong> Whoop<br>
+                    <strong>Życie + sport w jednym urządzeniu:</strong> Apple Watch Ultra<br>
+                    <strong>Sport wytrzymałościowy i outdoor:</strong> Garmin
+                </p>
+                <p style="margin-top: 16px;">
+                    Jeśli masz budżet na jedno urządzenie, wybierz je pod swój cel: sen/regeneracja albo sport/aktywność.
+                </p>
+            </div>
+
+            <h2>Jak wykorzystać dane? Prosty protokół decyzyjny</h2>
+            <p>Dane mają sens tylko wtedy, gdy pomagają podejmować decyzje. Oto prosty schemat, który stosuję w praktyce:</p>
+
+            <h3>🌅 Rano sprawdź:</h3>
+            <ol>
+                <li><strong>HRV</strong> – czy jest w okolicy normy?</li>
+                <li><strong>RHR</strong> – czy jest wyraźnie wyższe niż zwykle?</li>
+                <li><strong>Sen</strong> – czy było wystarczająco długo i bez wielu przebudzeń?</li>
+                <li><strong>Temperatura</strong> – czy odbiega od Twojej bazy?</li>
+            </ol>
+
+            <h3>Decyzje treningowe:</h3>
+            <ul>
+                <li><strong>Wszystko wygląda dobrze</strong> → trening zgodnie z planem.</li>
+                <li><strong>1–2 ostrzeżenia</strong> → lżejszy trening, mniej serii lub mniejsza intensywność.</li>
+                <li><strong>2+ mocne sygnały</strong> → regeneracja: spacer, mobilizacja albo dzień wolny.</li>
+            </ul>
+
+            <h3>📊 Raz w tygodniu:</h3>
+            <ul>
+                <li>Czy HRV ma trend rosnący, stabilny czy spadkowy?</li>
+                <li>Czy sen jest regularny i wystarczająco długi?</li>
+                <li>Czy obciążenie tygodnia ma sens w kontekście regeneracji?</li>
+            </ul>
+
+            <p>Jeśli przez 2 tygodnie widzisz pogorszenie, zwykle pomaga tydzień lżejszy (mniej serii i mniejsza intensywność).</p>
+
+            <h2>Błędy, których warto unikać</h2>
+            <div class="highlight-box">
+                <h3>❌ Najczęstsze pułapki</h3>
+                <ol>
+                    <li><strong>Przeciążenie danymi</strong> – śledzisz 20 parametrów i nie wiesz, co jest ważne. Skup się na HRV, RHR i śnie.</li>
+                    <li><strong>Ignorowanie sygnałów organizmu</strong> – liczby pomagają, ale samopoczucie też ma znaczenie.</li>
+                    <li><strong>Porównywanie się do innych</strong> – liczą się Twoje trendy, nie cudze wartości.</li>
+                    <li><strong>Brak reakcji</strong> – widzisz przemęczenie, ale dokładasz kolejne treningi „bo plan”.</li>
+                    <li><strong>Panikowanie po jednym dniu</strong> – liczy się średnia i trend, nie pojedynczy gorszy pomiar.</li>
+                </ol>
+            </div>
+
+            <h2>Wearables w praktyce trenerskiej: przykład</h2>
+            <p>W pracy z podopiecznymi dane często skracają drogę do rozwiązania problemu. Przykład:</p>
+
+            <p><strong>Klientka: Anna, 32 lata</strong><br>
+            <strong>Cel:</strong> redukcja tkanki tłuszczowej i więcej energii</p>
+
+            <p><strong>Problem:</strong> 5 treningów tygodniowo + deficyt kalorii, a do tego stałe zmęczenie i brak postępów.</p>
+
+            <p><strong>Dane:</strong></p>
+            <ul>
+                <li>HRV: wyraźnie poniżej jej normy</li>
+                <li>RHR: podwyższone</li>
+                <li>Sen: krótki, z dużą liczbą przebudzeń</li>
+                <li>Temperatura: lekko powyżej bazy</li>
+            </ul>
+
+            <p><strong>Wniosek:</strong> przeciążenie + słaba regeneracja.</p>
+
+            <p><strong>Zmiany:</strong></p>
+            <ol>
+                <li>Trening: 5x → 3x w tygodniu</li>
+                <li>Sen: proste zasady (stałe godziny, chłodna sypialnia, ograniczenie ekranów)</li>
+                <li>Kalorie: lekkie podniesienie (organizm był „zaciśnięty”)</li>
+                <li>Redukcja stresu (oddech, spacery, prosty rytuał wieczorny)</li>
+            </ol>
+
+            <p><strong>Efekt po 6 tygodniach:</strong> lepszy sen, poprawa regeneracji, spadek masy i powrót energii.</p>
+
+            <div class="key-takeaway">
+                <h3>🎯 Podsumowanie: co robić od jutra?</h3>
+                <p>
+                    <strong>1)</strong> Wybierz urządzenie pod cel (sen/regeneracja albo sport)<br>
+                    <strong>2)</strong> Zbieraj dane 2–4 tygodnie, żeby poznać swoją bazę<br>
+                    <strong>3)</strong> Skup się na HRV, RHR i śnie (resztę traktuj pomocniczo)<br>
+                    <strong>4)</strong> Ustal proste zasady: „jeśli HRV mocno spada, to lżejszy trening”<br>
+                    <strong>5)</strong> Co tydzień sprawdzaj trend i koryguj plan
+                </p>
+                <p style="margin-top: 16px;">
+                    Wearables mają pomagać, a nie wkręcać w obsesję. Proste decyzje + konsekwencja = efekty.
+                </p>
+            </div>
+
+            <div style="margin-top: 60px; padding: 40px; background: var(--gray-dark); border-radius: 10px; text-align: center;">
+                <h3 style="margin-top: 0; margin-bottom: 20px;">
+                    Chcesz coaching oparty na danych z wearables?
+                </h3>
+                <p style="margin-bottom: 25px;">
+                    Pomogę Ci ułożyć plan treningu i regeneracji na podstawie HRV, snu, tętna spoczynkowego i Twojego trybu dnia.
+                </p>
+                <a href="/#kontakt" class="cta-button">Umów konsultację</a>
+            </div>
+
+            <hr style="margin: 60px 0; border: none; border-top: 1px solid rgba(255,255,255,0.1);">
+
+            <h3>Źródła naukowe</h3>
+            <ul style="font-size: 0.9rem; opacity: 0.7;">
+                <li>Shaffer, F. & Ginsberg, J.P. (2023). An Overview of Heart Rate Variability Metrics. Front Public Health</li>
+                <li>Plews, D.J. et al. (2022). Training adaptation and HRV. Int J Sports Physiol Perform</li>
+                <li>Walker, M. (2017). Why We Sleep – rozdziały o śnie i wpływie na regenerację</li>
+                <li>Huberman Lab Podcast (2023): Using Wearables to Improve Performance</li>
+                <li>Whoop – materiały walidacyjne i opis metod pomiaru (2024)</li>
+            </ul>
+        </div>
+
+        <div style="margin-top: 60px; padding: 40px; background: var(--gray-dark); border-radius: 10px; text-align: center;">
+            <h3 style="margin-bottom: 20px;">Podobało Ci się? Sprawdź inne artykuły:</h3>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="blog-optymalizacja-snu" style="color: var(--accent-orange);">→ Jak poprawić jakość snu?</a>
+                <a href="blog-suplementy" style="color: var(--accent-orange);">→ Podstawowe suplementy dla aktywnych</a>
+                <a href="/#blog" style="color: var(--accent-orange);">→ Wszystkie artykuły</a>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">BIO<span>COACH</span></div>
+                <p>&copy; <span id="current-year"></span> BioCoach. Wszystkie prawa zastrzeżone.</p>
+                <div class="footer-links">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        (function () {
+            const el = document.getElementById('current-year');
+            if (el) el.textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>

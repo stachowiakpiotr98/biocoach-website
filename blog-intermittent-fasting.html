@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1200">
+    <meta name="description" content="Intermittent Fasting - kompletny przewodnik. Protokoły 16:8, 20:4, korzyści i błędy. Analiza trenera personalnego z Poznania.">
+    <meta name="keywords" content="intermittent fasting, przerywany post, IF 16:8, autofagia, spalanie tłuszczu, biohacking, trener personalny Poznań, odchudzanie">
+    <title>Intermittent Fasting - Kompletny Przewodnik Biohackera | BioCoach</title>
+    
+<meta property="og:title" content="Intermittent Fasting - Kompletny Przewodnik Biohackera">
+    <meta property="og:description" content="Wszystko o przerywanym poście: protokoły, korzyści i pułapki. Sprawdź, czy to dla Ciebie.">
+    <meta property="og:type" content="article">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .article-hero {
+            height: 60vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 20px;
+        }
+
+        .article-container { max-width: 800px; margin: 80px auto; padding: 0 20px; }
+        .article-meta { display: flex; gap: 20px; margin-bottom: 30px; font-size: 0.9rem; color: #999; }
+        .article-content { line-height: 1.6; font-size: 1.05rem; }
+        .article-content h2 { font-size: 1.9rem; margin: 55px 0 18px; color: var(--accent-orange); }
+        .article-content h3 { font-size: 1.4rem; margin: 35px 0 12px; }
+        .article-content p { margin-bottom: 12px; }
+        .article-content ul, .article-content ol { margin: 12px 0 18px; padding-left: 28px; }
+        .article-content li { margin-bottom: 6px; }
+        .highlight-box { background: var(--gray-dark); padding: 20px 25px; border-left: 4px solid var(--accent-orange); margin: 40px 0; border-radius: 5px; }
+        .highlight-box > *:first-child { margin-top: 0; }
+        .highlight-box > *:last-child { margin-bottom: 0; }
+        .key-takeaway { background: linear-gradient(135deg, rgba(255, 87, 51, 0.1), rgba(0, 123, 255, 0.1)); padding: 20px 25px; border-radius: 10px; margin: 40px 0; }
+        .key-takeaway > *:first-child { margin-top: 0; }
+        .key-takeaway > *:last-child { margin-bottom: 0; }
+        .protocol-card { background: var(--gray-dark); padding: 20px 25px; margin: 25px 0; border-radius: 8px; border-left: 4px solid var(--accent-blue); }
+        .protocol-card > *:first-child { margin-top: 0; }
+        .protocol-card > *:last-child { margin-bottom: 0; }
+
+        .back-link { display: inline-block; margin-bottom: 30px; color: var(--accent-orange); transition: var(--transition); }
+        .back-link:hover { transform: translateX(-5px); }
+
+        
+        .article-cta { margin-top: 60px; }
+        .article-cta h3 { margin-top: 0; }
+
+        
+        .article-sources { margin-top: 60px; font-size: 0.85rem; opacity: 0.7; border-top: 1px solid #333; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">BIO<span>COACH</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="/#start" class="nav-link">Start</a></li>
+                <li><a href="/#omnie" class="nav-link">O mnie</a></li>
+                <li><a href="/#oferta" class="nav-link">Oferta</a></li>
+                <li><a href="/#blog" class="nav-link active">Blog</a></li>
+                <li><a href="/#opinie" class="nav-link">Opinie</a></li>
+                <li><a href="/#kontakt" class="nav-link">Kontakt</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+<section class="article-hero">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1920&h=1080&fit=crop" 
+             alt="Intermittent fasting zdrowy posiłek zegar trener Poznań" 
+             class="hero-bg-image">
+             
+        <div class="hero-content">
+            <span style="display: inline-block; padding: 8px 20px; background: var(--accent-blue); border-radius: 20px; font-size: 0.85rem; margin-bottom: 20px;">ŻYWIENIE</span>
+            <h1 style="font-size: 3rem; margin-bottom: 20px;">Intermittent Fasting<br>Kompletny przewodnik</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Protokoły, korzyści i pułapki przerwanego postu</p>
+        </div>
+    </section>
+
+<article class="article-container">
+        <a href="/#blog" class="back-link">← Wróć do bloga</a>
+        
+        <div class="article-meta">
+<span>📅 10 stycznia 2024</span>
+            <span>⏱️ 11 min czytania</span>
+        </div>
+
+        <div class="article-content">
+            <p class="lead" style="font-size: 1.25rem; font-weight: 300; color: #ccc;"><strong>Intermittent Fasting (IF)</strong> – przerywany post – to jeden z najpopularniejszych trendów w biohackingu i optymalizacji zdrowia. Ale czy zasługuje na hype? Jako <strong>trener personalny w Poznaniu</strong> i biohacker, stosuję ten model z powodzeniem u moich klientów. W tym artykule poznasz wszystkie protokoły, mechanizmy działania, korzyści i – co najważniejsze – <strong>kiedy IF może zaszkodzić</strong>.</p>
+
+            <h2>Czym jest Intermittent Fasting?</h2>
+            
+            <p>IF to <strong>wzorzec jedzenia</strong>, nie dieta. Nie chodzi o to, co jesz, ale kiedy jesz. Dzielisz dobę na:</p>
+
+            <ul>
+                <li><strong>Okno jedzenia</strong> – np. 8 godzin, w których spożywasz wszystkie posiłki</li>
+                <li><strong>Okno postu</strong> – np. 16 godzin bez kalorii (woda, czarna kawa i herbata bez dodatków są OK)</li>
+            </ul>
+
+            <p>IF nie jest nowy – ludzie pościli od tysięcy lat (religia, konieczność). Współczesna nauka odkryła, że post ma <strong>głębokie efekty metaboliczne i hormonalne</strong>, wykraczające daleko poza prostą redukcję kalorii.</p>
+
+            <div class="highlight-box">
+                <h3>🔬 Kluczowe mechanizmy IF:</h3>
+                <ul>
+                    <li><strong>Spadek insuliny</strong> → wzrost lipolizy (spalanie tłuszczu)</li>
+                    <li><strong>Wzrost hormonu wzrostu (GH)</strong> → ochrona mięśni, wsparcie redukcji</li>
+                    <li><strong>Autofagia</strong> – „recykling komórkowy”, usuwanie uszkodzonych struktur</li>
+                    <li><strong>Ketogeneza</strong> – produkcja ketonów (paliwo dla mózgu)</li>
+                    <li><strong>Aktywacja AMPK</strong> – regulator metabolizmu</li>
+                    <li><strong>Poprawa wrażliwości insulinowej</strong> – profilaktyka cukrzycy</li>
+                </ul>
+            </div>
+
+            <h2>Najpopularniejsze protokoły IF</h2>
+
+            <div class="protocol-card">
+                <h3>⏰ 16:8 (Leangains)</h3>
+                <p><strong>Post:</strong> 16 godzin | <strong>Jedzenie:</strong> 8 godzin</p>
+                <p><strong>Przykład:</strong> Jedzenie 12:00–20:00, post 20:00–12:00 (następnego dnia)</p>
+                
+                <p><strong>Dla kogo?</strong></p>
+                <ul>
+                    <li>Początkujący</li>
+                    <li>Osoby pracujące 9–17 (łatwo „ściąć” śniadanie)</li>
+                    <li>Ludzie chcący schudnąć bez drastycznych zmian</li>
+                </ul>
+
+                <p><strong>Plusy:</strong> Łatwy do utrzymania, elastyczny, skuteczny</p>
+                <p><strong>Minusy:</strong> Może być za łagodny dla zaawansowanych celów</p>
+            </div>
+
+            <div class="protocol-card">
+                <h3>⏰ 18:6</h3>
+                <p><strong>Post:</strong> 18 godzin | <strong>Jedzenie:</strong> 6 godzin</p>
+                <p><strong>Przykład:</strong> Jedzenie 14:00–20:00</p>
+                
+                <p><strong>Dla kogo?</strong></p>
+                <ul>
+                    <li>Osoby zaadaptowane do 16:8, chcące „mocniejszego” bodźca</li>
+                    <li>Ludzie z dobrą kontrolą głodu</li>
+                </ul>
+
+                <p><strong>Plusy:</strong> Głębsza ketoza, więcej autofagii</p>
+                <p><strong>Minusy:</strong> Trudniejsze społecznie, wymaga większej dyscypliny</p>
+            </div>
+
+            <div class="protocol-card">
+                <h3>⏰ 20:4 (Warrior Diet)</h3>
+                <p><strong>Post:</strong> 20 godzin | <strong>Jedzenie:</strong> 4 godziny</p>
+                <p><strong>Przykład:</strong> Jedzenie 18:00–22:00 (jeden większy posiłek + ewentualnie mniejszy)</p>
+                
+                <p><strong>Dla kogo?</strong></p>
+                <ul>
+                    <li>Zaawansowani</li>
+                    <li>Ludzie preferujący jeden duży posiłek</li>
+                </ul>
+
+                <p><strong>Plusy:</strong> Silny bodziec metaboliczny, „czysta głowa” w ciągu dnia</p>
+                <p><strong>Minusy:</strong> Trudniej dowieźć kalorie i białko, nie dla osób z dużym zapotrzebowaniem</p>
+            </div>
+
+            <div class="protocol-card">
+                <h3>⏰ 5:2</h3>
+                <p><strong>2 dni w tygodniu:</strong> bardzo niska kaloryczność (ok. 500–600 kcal)</p>
+                <p><strong>5 dni w tygodniu:</strong> normalne jedzenie</p>
+                
+                <p><strong>Dla kogo?</strong></p>
+                <ul>
+                    <li>Osoby, które nie lubią codziennych okien postu</li>
+                    <li>Ludzie szukający elastyczności</li>
+                </ul>
+
+                <p><strong>Plusy:</strong> Prosty schemat, łatwy do wpisania w tydzień</p>
+                <p><strong>Minusy:</strong> Dni „niskie” bywają trudne, zwykle mniej konsekwentne efekty</p>
+            </div>
+
+            <div class="protocol-card">
+                <h3>⏰ OMAD (jeden posiłek dziennie)</h3>
+                <p><strong>Post:</strong> 23 godziny | <strong>Jedzenie:</strong> ok. 1 godzina</p>
+                
+                <p><strong>Dla kogo?</strong></p>
+                <ul>
+                    <li>Zaawansowani</li>
+                    <li>Osoby z konkretnymi celami i dobrą tolerancją głodu</li>
+                </ul>
+
+                <p><strong>Plusy:</strong> Mocny bodziec metaboliczny</p>
+                <p><strong>Minusy:</strong> Trudno dowieźć mikro i makro, nie dla sportowców i osób z dużym stresem</p>
+            </div>
+
+            <h2>Korzyści Intermittent Fasting (potwierdzone naukowo)</h2>
+
+            <h3>🔥 1. Spalanie tłuszczu i redukcja wagi</h3>
+
+            <p>IF często ułatwia deficyt kaloryczny (mniej czasu na jedzenie = mniej kalorii) oraz wspiera metabolizm przez zmiany hormonalne:</p>
+
+            <ul>
+                <li>Spadek insuliny → łatwiejsze sięganie po tłuszcz jako paliwo</li>
+                <li>Wzrost noradrenaliny → większa mobilizacja energii</li>
+                <li>Wzrost GH → ochrona masy mięśniowej podczas redukcji</li>
+            </ul>
+
+            <p><strong>Uwaga praktyczna:</strong> IF nie „łamie praw fizyki” – nadal liczy się bilans. Dla wielu ludzi działa dlatego, że łatwiej utrzymać deficyt bez ciągłego podjadania.</p>
+
+            <h3>🧠 2. Funkcje poznawcze i „czysta głowa”</h3>
+
+            <ul>
+                <li><strong>Ketony</strong> (produkowane w dłuższym poście) mogą być stabilnym paliwem dla mózgu</li>
+                <li>Wiele osób raportuje lepszą koncentrację przy porannym poście</li>
+                <li>U części osób spada „mgła mózgowa” (szczególnie przy diecie opartej o nieprzetworzone jedzenie)</li>
+            </ul>
+
+            <h3>🔬 3. Autofagia – „sprzątanie komórkowe”</h3>
+
+            <p><strong>Autofagia</strong> to proces, w którym komórki „recyklingują” uszkodzone elementy. W praktyce: im lepsza higiena snu, stresu i jedzenia, tym lepiej działa całe „zaplecze” regeneracji, a post może być dodatkowym bodźcem.</p>
+
+            <ul>
+                <li>Autofagia rośnie wraz z czasem bez jedzenia (to proces ciągły, nie „przycisk”)</li>
+                <li>Najsilniejsze efekty obserwuje się zwykle przy dłuższych oknach niż 16 godzin</li>
+            </ul>
+
+            <h3>💪 4. Ochrona masy mięśniowej (wbrew mitom)</h3>
+
+            <p>Mit: „post = utrata mięśni”. <strong>Nie musi tak być</strong>. IF zwykle nie powoduje większej utraty mięśni niż klasyczna redukcja – jeśli:</p>
+
+            <ul>
+                <li>jesz wystarczająco białka w oknie jedzenia (celuj w 1.6–2.2 g/kg masy ciała)</li>
+                <li>trenujesz siłowo</li>
+                <li>deficyt nie jest zbyt agresywny</li>
+            </ul>
+
+            <h3>🩺 5. Markery zdrowia</h3>
+
+            <p>U wielu osób IF poprawia parametry metaboliczne, głównie przez redukcję masy ciała i lepszą kontrolę jedzenia:</p>
+
+            <ul>
+                <li>wrażliwość insulinowa</li>
+                <li>HbA1c</li>
+                <li>ciśnienie</li>
+                <li>lipidy (LDL/trójglicerydy) – zależnie od jakości diety</li>
+                <li>markery zapalne – zależnie od stylu życia</li>
+            </ul>
+
+            <h3>⏳ 6. Długowieczność</h3>
+
+            <p>Najmocniejsze dane o „wydłużaniu życia” pochodzą z badań na organizmach modelowych. U ludzi wciąż dominuje wniosek praktyczny: IF bywa skutecznym narzędziem, jeśli poprawia Twoją konsystencję i jakość diety.</p>
+
+            <h2>Pułapki i błędy w Intermittent Fasting</h2>
+
+            <div class="key-takeaway">
+                <h3>❌ TOP 7 błędów (które widzę u klientów):</h3>
+
+                <p><strong>1. Zbyt niskie kalorie</strong><br>
+                IF to nie głodówka. Jeśli deficyt jest zbyt duży, rośnie zmęczenie, spada wydolność, a regeneracja leci w dół.</p>
+
+                <p><strong>2. Za mało białka</strong><br>
+                Krótsze okno jedzenia = łatwiej „nie dowieźć” białka. Celuj w 1.6–2.2 g/kg masy ciała.</p>
+
+                <p><strong>3. „Łamanie” postu napojami z kaloriami</strong><br>
+                Mleko do kawy, soki, napoje „zero” z dodatkami – często rozwalają kontrolę apetytu. Najbezpieczniej: woda, czarna kawa, herbata.</p>
+
+                <p><strong>4. Za agresywne skracanie okna jedzenia</strong><br>
+                Jeśli 16:8 działa – nie musisz iść w 20:4 tylko dlatego, że „tak robią w internecie”.</p>
+
+                <p><strong>5. Mocny trening na czczo bez adaptacji</strong><br>
+                Na początku wydolność bywa słabsza. Zaczynaj spokojnie i oceniaj, jak reagujesz.</p>
+
+                <p><strong>6. IF przy kiepskim śnie i wysokim stresie</strong><br>
+                Post jest stresorem. Jeśli śpisz 5–6 godzin, najpierw napraw sen.</p>
+
+                <p><strong>7. IF u kobiet bez uwzględnienia cyklu</strong><br>
+                Zbyt agresywny post może pogorszyć samopoczucie i rozregulować cykl. Lepiej zacząć łagodniej.</p>
+            </div>
+
+            <h2>Kto NIE powinien robić IF?</h2>
+
+            <div class="highlight-box">
+                <h3>🚫 Przeciwwskazania:</h3>
+                <ul>
+                    <li><strong>Kobiety w ciąży i karmiące</strong> – potrzeba stałego dowozu składników</li>
+                    <li><strong>Dzieci i młodzież</strong> – okres wzrostu</li>
+                    <li><strong>Osoby z historią zaburzeń odżywiania</strong> – ryzyko nawrotu</li>
+                    <li><strong>Bardzo niski poziom tkanki tłuszczowej</strong> – mężczyźni &lt;8%, kobiety &lt;16%</li>
+                    <li><strong>Sportowcy z dużym zapotrzebowaniem</strong> – trudno zjeść 3500+ kcal w krótkim oknie</li>
+                    <li><strong>Cukrzyca typu 1</strong> – tylko pod kontrolą lekarza</li>
+                    <li><strong>Chroniczny stres / wypalenie</strong> – IF może pogorszyć kortyzol</li>
+                </ul>
+            </div>
+
+            <h2>IF dla kobiet – specjalne uwagi</h2>
+
+            <p>Kobiety mają bardziej wrażliwy system hormonalny. IF może zaburzać cykl, jeśli jest robiony zbyt agresywnie lub w złym momencie.</p>
+
+            <h3>Zasady IF dla kobiet:</h3>
+
+            <ul>
+                <li><strong>Krótsze okna postu:</strong> start od 12:12, potem 14:10</li>
+                <li><strong>Większa elastyczność w fazie lutealnej:</strong> 1–2 tygodnie przed okresem często lepiej skrócić post</li>
+                <li><strong>Mniejszy deficyt:</strong> -10% zamiast -30%</li>
+                <li><strong>Monitoruj cykl:</strong> jeśli się rozjeżdża – przerwij i wróć do klasycznego jedzenia na kilka tygodni</li>
+                <li><strong>Priorytet: sen, stres, trening siłowy</strong> – IF dopiero później</li>
+            </ul>
+
+            <p>Jeśli pojawią się: brak okresu, trądzik, wypadanie włosów, przewlekłe zmęczenie → <strong>przerwij IF</strong> i skonsultuj się z lekarzem.</p>
+
+            <h2>Mój protokół – jak ja podchodzę do postu?</h2>
+
+            <p>Jako trener często jestem pytany, czy sam poszczę. Prawda jest taka, że <strong>nie trzymam sztywnego schematu IF codziennie</strong>. Przy intensywnych treningach regularność i dowóz kalorii bywają ważniejsze.</p>
+
+            <p>Stosuję elementy IF intuicyjnie, w konkretnych sytuacjach:</p>
+
+            <ul>
+                <li><strong>Praca głęboka:</strong> kiedy mam intensywną pracę umysłową rano (np. planowanie, analiza), celowo <strong>przesuwam pierwszy posiłek</strong>. Piję wodę i czarną kawę.</li>
+                <li><strong>Regulacja po „luźniejszym” dniu:</strong> jeśli w weekend zjem dużo, w poniedziałek naturalnie wydłużam przerwę od jedzenia, żeby „uspokoić” apetyt.</li>
+            </ul>
+            
+            <p>Dla mnie IF to narzędzie, a nie religia.</p>
+
+            <h2>Jak zacząć IF? Plan 30-dniowy</h2>
+
+            <div class="key-takeaway">
+                <h3>📅 Stopniowa adaptacja (najbezpieczniejsze podejście):</h3>
+
+                <p><strong>Tydzień 1–2: 12:12</strong></p>
+                <ul>
+                    <li>Post: 20:00–8:00 (głównie przez sen)</li>
+                    <li>Cel: nauczyć się kończyć jedzenie wcześniej</li>
+                </ul>
+
+                <p><strong>Tydzień 3–4: 14:10</strong></p>
+                <ul>
+                    <li>Post: 20:00–10:00</li>
+                    <li>Pomijanie bardzo wczesnego śniadania, kawa na czczo (jeśli tolerujesz)</li>
+                    <li>Pierwsze wyczucie „głodu postu”</li>
+                </ul>
+
+                <p><strong>Tydzień 5+: 16:8</strong></p>
+                <ul>
+                    <li>Post: 20:00–12:00</li>
+                    <li>Najlepszy punkt dla większości ludzi</li>
+                    <li>Utrzymuj długoterminowo i obserwuj samopoczucie</li>
+                </ul>
+
+                <p><strong>Opcjonalnie (zaawansowani): 18:6 lub 20:4</strong></p>
+                <ul>
+                    <li>Tylko jeśli 16:8 jest komfortowe przez 2+ miesiące</li>
+                    <li>Nie dla wszystkich – słuchaj ciała</li>
+                </ul>
+            </div>
+
+            <h2>FAQ – Najczęstsze pytania</h2>
+
+            <h3>❓ Czy mogę pić kawę podczas postu?</h3>
+            <p><strong>Tak.</strong> Czarna kawa nie dostarcza kalorii. Bez mleka, cukru i syropów.</p>
+
+            <h3>❓ Czy BCAA łamią post?</h3>
+            <p><strong>Tak.</strong> Aminokwasy mogą podbić insulinę. Jeśli trenujesz na czczo, albo trenuj bez BCAA, albo jedz przed treningiem.</p>
+
+            <h3>❓ Czy stracę mięśnie na IF?</h3>
+            <p><strong>Nie</strong>, jeśli jesz wystarczająco białka i trenujesz siłowo.</p>
+
+            <h3>❓ Ile mogę schudnąć na IF?</h3>
+            <p>Realistycznie: 0.5–1 kg tygodniowo przy rozsądnym deficycie. Szybciej zwykle oznacza gorszą regenerację i ryzyko utraty mięśni.</p>
+
+            <h3>❓ Czy IF spowalnia metabolizm?</h3>
+            <p>Zwykle nie, o ile nie robisz długoterminowo zbyt dużego deficytu. Problemy zaczynają się, gdy jesz za mało przez wiele tygodni.</p>
+
+            <h3>❓ Czy IF działa dla wegan i wegetarian?</h3>
+            <p><strong>Tak.</strong> To wzorzec jedzenia. Zadbaj tylko o białko i mikroelementy w oknie jedzenia.</p>
+
+            <h2>Trener personalny z podejściem żywieniowym</h2>
+
+            <p>Jako <strong>trener personalny w Poznaniu</strong>, włączam IF do planów klientów tylko wtedy, gdy pasuje do ich stylu życia i celów. IF to mocne narzędzie, ale nie jest obowiązkowe.</p>
+
+            <p><strong>W mojej ofercie:</strong></p>
+            <ul>
+                <li>Ocena, czy IF ma sens w Twojej sytuacji (styl życia, stres, trening, cele)</li>
+                <li>Spersonalizowany protokół (16:8, 14:10, elastyczny schemat)</li>
+                <li>Plan jedzenia w oknie (makro, mikro, timing)</li>
+                <li>Integracja z treningiem (kiedy trenować na czczo)</li>
+                <li>Monitoring danych (HRV, sen, waga, siła)</li>
+            </ul>
+
+            <div class="article-cta" style="padding: 40px; background: var(--gray-dark); border-radius: 10px; text-align: center;">
+                <h3 style="margin-top: 0; margin-bottom: 20px;">Chcesz wdrożyć IF bezpiecznie i z głową?</h3>
+                <p style="margin-bottom: 25px;">Dopasuję protokół do Twojego stylu życia, treningu i wyników badań.</p>
+                <a href="/#kontakt" class="cta-button">Umów konsultację</a>
+            </div>
+
+            <div class="article-sources">
+                <h3>Źródła naukowe</h3>
+                <ol>
+                    <li>Mattson, M.P. et al. (2023). Effects of Intermittent Fasting on Health. <em>N Engl J Med</em></li>
+                    <li>Anton, S.D. et al. (2022). Flipping the Metabolic Switch: Intermittent Fasting and Health. <em>Obesity</em></li>
+                    <li>Tinsley, G.M. &amp; La Bounty, P.M. (2021). Intermittent Fasting and Body Composition. <em>Nutrients</em></li>
+                    <li>de Cabo, R. &amp; Mattson, M.P. (2023). Effects of Intermittent Fasting on Aging. <em>Cell Metab</em></li>
+                    <li>Levine, M.E. et al. (2022). Autophagy in Health and Disease. <em>Nature</em></li>
+                </ol>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px; padding: 40px; background: var(--gray-dark); border-radius: 10px; text-align: center;">
+            <h3 style="margin-top: 0; margin-bottom: 20px;">Podobało Ci się? Sprawdź inne artykuły:</h3>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                <a href="blog-testosteron" style="color: var(--accent-orange);">→ Jak zwiększyć testosteron?</a>
+                <a href="blog-suplementy" style="color: var(--accent-orange);">→ Podstawowe suplementy</a>
+                <a href="/#blog" style="color: var(--accent-orange);">→ Wszystkie artykuły</a>
+            </div>
+        </div>
+    </article>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">BIO<span>COACH</span></div>
+                <p>&copy; <span id="current-year"></span> BioCoach. Wszystkie prawa zastrzeżone.</p>
+                <div class="footer-links">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        (function () {
+            const el = document.getElementById('current-year');
+            if (el) el.textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+</html>
