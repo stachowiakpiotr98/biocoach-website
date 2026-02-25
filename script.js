@@ -151,17 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // DODATKOWE FUNKCJE
 // ===========================
 
-if ('loading' in HTMLImageElement.prototype) {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-        img.src = img.dataset.src;
-    });
-} else {
-    // Fallback dla starszych przeglądarek
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-    document.body.appendChild(script);
-}
+// Native lazy loading – przeglądarka obsługuje loading="lazy" automatycznie
 
 console.log('🚀 BioCoach website loaded successfully!');
 
