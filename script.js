@@ -153,6 +153,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Native lazy loading – przeglądarka obsługuje loading="lazy" automatycznie
 
+// ===========================
+// CONSENT MODAL (pop-up przed wysłaniem formularza)
+// ===========================
+
+const consentModal = document.getElementById('consentModal');
+const openConsentBtn = document.getElementById('openConsentModal');
+const closeConsentBtn = document.getElementById('closeConsentModal');
+const cancelConsentBtn = document.getElementById('cancelConsent');
+const acceptConsentBtn = document.getElementById('acceptConsent');
+const contactFormEl = document.getElementById('contact-form');
+
+if (openConsentBtn && consentModal && contactFormEl) {
+    // Otwórz modal po kliknięciu "Wyślij wiadomość"
+    openConsentBtn.addEventListener('click', () => {
+        // Walidacja pól formularza przed pokazaniem modala
+        if (!contactFormEl.checkValidity()) {
+            contactFormEl.reportValidity();
+            return;
+        }
+        consentModal.classList.add('active');
+    });
+
+    // Zamknij modal
+    function closeModal() {
+        consentModal.classList.remove('active');
+    }
+
+    closeConsentBtn.addEventListener('click', closeModal);
+    cancelConsentBtn.addEventListener('click', closeModal);
+
+    // Zamknij po kliknięciu w tło
+    consentModal.addEventListener('click', (e) => {
+        if (e.target === consentModal) closeModal();
+    });
+
+    // Zamknij na Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && consentModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
+
+    // Akceptacja → wyślij formularz
+    acceptConsentBtn.addEventListener('click', () => {
+        closeModal();
+        contactFormEl.submit();
+    });
+}
+
 console.log('🚀 BioCoach website loaded successfully!');
 
 // ===========================

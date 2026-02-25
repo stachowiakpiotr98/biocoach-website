@@ -569,14 +569,22 @@
                     <div class="form-group">
                         <textarea id="message" name="message" rows="5" placeholder="Opowiedz o swoich celach..." required></textarea>
                     </div>
-                    <div class="form-group form-consent">
-                        <label>
-                            <input type="checkbox" name="consent" required>
-                            Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z <a href="polityka-prywatnosci.html" target="_blank">Polityką Prywatności</a>.
-                        </label>
-                    </div>
-                    <button type="submit" class="submit-button">Wyślij wiadomość</button>
+                    <button type="button" class="submit-button" id="openConsentModal">Wyślij wiadomość</button>
                 </form>
+
+    <!-- Consent Modal -->
+    <div class="consent-modal-overlay" id="consentModal">
+        <div class="consent-modal">
+            <button class="consent-modal-close" id="closeConsentModal">&times;</button>
+            <h3>Zgoda na przetwarzanie danych</h3>
+            <p>Klikając „Wyślij", wyrażasz zgodę na przetwarzanie Twoich danych osobowych (imię, e-mail, telefon, treść wiadomości) w celu odpowiedzi na Twoje zapytanie, zgodnie z <a href="polityka-prywatnosci.html" target="_blank">Polityką Prywatności</a>.</p>
+            <p class="consent-modal-small">Możesz cofnąć zgodę w dowolnym momencie kontaktując się z nami mailowo.</p>
+            <div class="consent-modal-buttons">
+                <button class="consent-btn consent-btn-cancel" id="cancelConsent">Anuluj</button>
+                <button class="consent-btn consent-btn-accept" id="acceptConsent">Wyślij</button>
+            </div>
+        </div>
+    </div>
             </div>
         </div>
     </section>
