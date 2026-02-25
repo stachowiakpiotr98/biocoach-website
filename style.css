@@ -816,7 +816,7 @@ a {
 }
 
 .consent-modal {
-    background: var(--secondary-bg);
+    background: #1e1e1e;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
     padding: 35px 30px 30px;
@@ -971,7 +971,7 @@ a {
 }
 
 .cookie-banner-content {
-    background: var(--secondary-bg);
+    background: #1e1e1e;
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 16px;
     padding: 40px 35px 35px;
