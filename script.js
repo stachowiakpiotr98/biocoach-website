@@ -399,13 +399,11 @@ if (cookieBanner) {
     const consent = localStorage.getItem('cookie-consent');
     if (!consent) {
         cookieBanner.classList.add('active');
-        document.body.style.overflow = 'hidden';
     }
 
     cookieAccept.addEventListener('click', () => {
         localStorage.setItem('cookie-consent', 'accepted');
         cookieBanner.classList.remove('active');
-        document.body.style.overflow = '';
         // Załaduj GA4 po zgodzie
         if (typeof loadGA4 === 'function') loadGA4();
     });
@@ -413,6 +411,5 @@ if (cookieBanner) {
     cookieReject.addEventListener('click', () => {
         localStorage.setItem('cookie-consent', 'rejected');
         cookieBanner.classList.remove('active');
-        document.body.style.overflow = '';
     });
 }

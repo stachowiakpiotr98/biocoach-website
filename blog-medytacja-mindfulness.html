@@ -414,18 +414,15 @@
     if (!banner) return;
     if (!localStorage.getItem('cookie-consent')) {
         banner.classList.add('active');
-        document.body.style.overflow = 'hidden';
     }
     document.getElementById('cookieAccept').addEventListener('click', function(){
         localStorage.setItem('cookie-consent','accepted');
         banner.classList.remove('active');
-        document.body.style.overflow = '';
         if (typeof loadGA4==='function') loadGA4();
     });
     document.getElementById('cookieReject').addEventListener('click', function(){
         localStorage.setItem('cookie-consent','rejected');
         banner.classList.remove('active');
-        document.body.style.overflow = '';
     });
 })();
 </script>
