@@ -185,7 +185,10 @@
     <!-- Cookie Consent Banner -->
     <div class="cookie-banner" id="cookieBanner">
         <div class="cookie-banner-content">
-            <p>Ta strona używa plików cookies (Google Analytics) w celu analizy ruchu. Klikając Akceptuję", wyrażasz zgodę na ich użycie. Szczegóły w <a href="polityka-prywatnosci.html">Polityce Prywatności</a>.</p>
+            <div class="cookie-banner-icon">🍪</div>
+            <h3>Ta strona używa cookies</h3>
+            <p>Używamy plików cookies (Google Analytics) w celu analizy ruchu na stronie i poprawy jej działania.</p>
+            <p>Klikając „Akceptuję", wyrażasz zgodę na ich użycie. Szczegóły znajdziesz w <a href="polityka-prywatnosci.html">Polityce Prywatności</a>.</p>
             <div class="cookie-banner-buttons">
                 <button class="cookie-btn cookie-btn-reject" id="cookieReject">Odrzuć</button>
                 <button class="cookie-btn cookie-btn-accept" id="cookieAccept">Akceptuję</button>
@@ -197,15 +200,20 @@
 (function(){
     var banner = document.getElementById('cookieBanner');
     if (!banner) return;
-    if (!localStorage.getItem('cookie-consent')) banner.classList.add('active');
+    if (!localStorage.getItem('cookie-consent')) {
+        banner.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
     document.getElementById('cookieAccept').addEventListener('click', function(){
         localStorage.setItem('cookie-consent','accepted');
         banner.classList.remove('active');
+        document.body.style.overflow = '';
         if (typeof loadGA4==='function') loadGA4();
     });
     document.getElementById('cookieReject').addEventListener('click', function(){
         localStorage.setItem('cookie-consent','rejected');
         banner.classList.remove('active');
+        document.body.style.overflow = '';
     });
 })();
 </script>
