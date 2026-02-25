@@ -798,9 +798,6 @@ a {
 
 /* Consent checkbox */
 .form-consent {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
     margin-bottom: 10px;
 }
 
@@ -815,11 +812,16 @@ a {
 }
 
 .form-consent input[type="checkbox"] {
-    margin-top: 4px;
+    width: auto;
+    padding: 0;
+    margin-top: 3px;
+    flex-shrink: 0;
     accent-color: var(--accent-orange);
     min-width: 18px;
     min-height: 18px;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .form-consent a {
