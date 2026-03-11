@@ -479,6 +479,7 @@ a {
     border-radius: 15px;
     overflow: hidden;
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .blog-card:hover {

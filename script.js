@@ -387,6 +387,17 @@ if (testimonialsCarousel && testimonialsPrev && testimonialsNext) {
 }
 
 // ===========================
+// BLOG CARD – CAŁA KARTA KLIKALNA
+// ===========================
+document.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return; // nie blokuj kliknięcia w sam link
+        const link = card.querySelector('a.read-more');
+        if (link) window.location.href = link.href;
+    });
+});
+
+// ===========================
 // COOKIE CONSENT BANNER
 // ===========================
 
